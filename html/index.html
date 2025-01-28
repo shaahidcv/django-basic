@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <h1>heading</h1>
+   <h2>heading</h2>
+   <h3>heading</h3>
+   <h4>heading</h4>
+   <h5>heading</h5>
+   <h6>heading</h6>
+
+   <p><b>hello world </b>Lorem ipsum <i> dolor sit amet</i> consectetur <sub>Sint eligendi animi</sub> adipisicing elit. ma <mark>Sint eligendi animi</mark>  nulla <u>umquam quia eveniet</u> numquam quia <strong>Sint eligendi animi</strong>eveniet repudiandae <em>Sint eligendi animi</em> veritatis <small>Sint eligendi animi</small> est, accusamus dolore. Sit voluptatibus esse cupiditate quos! Possimus quam beatae voluptatibus numquam?</p>
+    <marquee behavior="" direction="up">hellooo</marquee>
+
+
+
+    <img src="hictimes.com/thumb/msid-106775052,width-1600,height-900,resizemode-4,imgsize-69266/mclaren-750s-launched-in-india-at-rs-5-91-crore-what-makes-it-so-expensive.jpg" alt="car ima"  width="100px"/>
+    <video src=""></video>
+    <audio src=""></audio> -->
+    <ol>
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+        <li>mango</li>
+    </ol>
+    <ul>
+        <li>tomato</li>
+        <li>carrot</li>
+        <li>onion</li>
+        <li>potato</li>
+    </ul>
+    <dl>
+        <dt>Name</dt>
+        <dd>John Doe</dd>
+        <dt>Age</dt>
+        <dd>30</dd>
+        <dt>Country</dt>
+        <dd>USA</dd>
+    </dl>
+
+    <form action="post">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        
+        <label for="pass">Password</label><br>
+        <input type="password" id="password" name="password"/><br>
+        <input type="submit" value="Submit"><br>
+        <input type="email">
+        <input type="checkbox" name="" id="">
+        <input type="radio">
+        <input type="file">
+        <input type="hidden">
+        <input type="image">
+        <input type="reset"><br>
+        <input type="button" />
+        <input type="color">
+        <input type="date">
+        <input type="time">
+        <input type="month">
+        <input type="week">
+        <input type="datetime-local">
+        <input type="range">
+    </form>
+
+    <table>
+       <thead>
+        <tr>
+            <td>name</td>
+            <td>place</td>
+            <td>age</td>
+        </tr>
+       
+       </thead>
+       <tbody>
+        <tr>
+            <td>john</td>
+            <td>usa</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>jane</td>
+            <td>uk</td>
+            <td>23</td>
+        </tr>
+       </tbody>
+    </table>
+
+    <label for="">city</label>
+    <select name="city" id="">
+        <option value="">kannur</option>
+        <option value="">coimbatore</option>
+        <option value="">tiruchirapalli</option>
+        <option value="">madurai</option>
+    </select><br>
+
+    <iframe src="data:image/jpeg;base64,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" frameborder="100" height="100px" width="100px"  ></iframe>
+
+
+    <ruby>
+        <rb>Ruby</rb>
+        <rt>ルビー</rt>
+    </ruby>
+
+    <textarea name="hello" id="" rows="3" cols="20"  placeholder="enter here"></textarea>
+    
+
+    <fieldset>
+        <legend>Gender:</legend>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female">
+    </fieldset>
+
+    <h1>HTML</h1>
+    <details>
+        <summary>
+            HTML stands for HyperText Markup Language
+        </summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, ipsum ratione. Accusantium, iste? Praesentium nisi fugit hic asperiores iste optio est deserunt, recusandae quasi eaque laudantium molestiae quia ut necessitatibus?</p>
+    </details>
+
+
+
+</body>
+</html>

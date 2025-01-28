@@ -1,0 +1,18 @@
+{% include 'menu.html' %}
+{% block content %}
+
+
+<h1>List Movies</h1>
+{% for movies_obj in movies %}
+<h1>Title : {{movies_obj.title | upper}}</h1>
+<p>Summary : {{movies_obj.description}}</p>
+<h4>Year : {{movies_obj.year}}</h4>
+<a href="{% url 'edit' movies_obj.id %}">edit</a> / <a href="{% url 'delete' movies_obj.id %}">delete</a>
+<!-- {% if movies_obj.sucess %}
+<p>Movie was a sucess at that time</p>
+{% else %}
+<p>Movie was a Flop </p>
+{% endif %}  -->
+{% endfor %} 
+
+{% endblock content %}
