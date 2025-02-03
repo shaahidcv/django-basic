@@ -1,28 +1,27 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . models import MovieInfo
 from . forms import MovieForm
 
 # Create your views here.
 def create(request):
-    frm = MovieForm()
+    if request.method == "POST":
+        print("hi")
+        print(request.FILES)  # Debugging file uploads
 
-    if request.POST:
-        # title = request.POST.get("title")
-        # year = request.POST.get("year")
-        # desc = request.POST.get("description")
-        # movie_obj = MovieInfo(title=title,year=year,description=desc)
-        # movie_obj.save()
-        if request.POST:
-            frm=MovieForm(request.POST)
-            if frm.is_valid():
-                frm.save()
-        else:
-            frm=MovieForm()
+        frm = MovieForm(request.POST, request.FILES)
+
+        if frm.is_valid():
+            frm.save()
+            return redirect('create')  # Ensure this matches your URL name
+
+    else:
+        frm = MovieForm()
+
+    return render(request, 'create.html', {'frm': frm})
+  
 
 
-
-    return render(request,'create.html',{'frm':frm})
-
+  
 def list(request):
     movie_data = MovieInfo.objects.all()
     print(movie_data)

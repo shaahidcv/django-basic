@@ -17,6 +17,8 @@ Including another URLconf
 
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('create/', views.create,name='create'),
@@ -25,3 +27,5 @@ urlpatterns = [
     path('list/', views.list,name='list'),
     path('',views.create,name='create')
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
